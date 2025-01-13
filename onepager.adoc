@@ -1,0 +1,63 @@
+:imagesdir: ./images
+
+
+
+= Meyer PC
+IT die Funktioniert
+:toc:
+:toclevels: 1
+:toc-title:
+:favicon: ./images/favicon/favicon.png
+
+[#meyer-pc-logo]
+image::Logo.png[Meyer PC, 250]
+
+== Über mich
+Mein Name ist Dennis Meyer, und ich bin IT-Spezialist mit einer klaren Mission: Menschen und kleine Unternehmen bei ihren IT-Herausforderungen zu unterstützen. Mein Fokus liegt darauf, praxisnahe und effektive Lösungen für alltägliche IT-Probleme zu finden – sei es im Bereich PC-Support, IT-Infrastruktur oder der Digitalisierung von Prozessen.
+
+Ich glaube daran, dass Technologie nicht kompliziert sein muss. Deshalb stehe ich meinen Kunden mit Rat und Tat zur Seite, um deren Systeme effizienter, sicherer und zukunftsfähig zu machen. Dabei lege ich besonderen Wert auf persönliche Beratung und individuelle Anpassungen, die wirklich zu den Bedürfnissen passen. Mein Service ist darauf ausgerichtet, echten Mehrwert zu bieten – erschwinglich und fair, denn Unterstützung sollte für jeden zugänglich sein.
+
+== Leistungen
+
+=== Allgemeiner PC-Support
+- Unterstützung für Windows- und Linux-Systeme.
+- Spezialisiert auf Linux-Gaming (SteamOS, ProtonDB).
+- Hardware- und Softwareprobleme beheben.
+
+=== IT-Support für kleine Läden
+- Aufbau und Wartung von Netzwerken.
+- Cloud- und Backup-Lösungen.
+- Digitalisierung von Prozessen.
+
+== Digitalisierung
+Die Digitalisierung kann kleinen Unternehmen helfen, effizienter und kundenfreundlicher zu arbeiten. Ich biete individuelle Lösungen für:
+
+- **Verwaltung und Dokumentation**: Einführung von Tools für Terminvereinbarungen, Rechnungsstellung und Bestandsverwaltung.
+- **Kundendaten und Kommunikation**: Aufbau von einfachen CRM-Systemen zur Kundenverwaltung.
+- **Anmeldung und Zahlungsabwicklung**: Digitalisierung von Prozessen wie Online-Anmeldungen oder modernen Kassensystemen.
+- **Sicherheit und Backups**: Beratung zu Firewalls, sicheren Cloud-Lösungen und regelmäßigen Backups.
+
+Gemeinsam erarbeiten wir die optimale Lösung, die perfekt auf die Bedürfnisse Ihres Unternehmens abgestimmt ist.
+
+== Kontakt
+Sie haben Fragen oder möchten ein Angebot? Kontaktieren Sie mich:
+
+* E-Mail: info@meyer-pc.de
+* Telefon: +491723527613  
+
+== Impressum & Datenschutz
+Impressum: Angaben gemäß § 5 TMG  
+
+    Dennis Meyer, Kleinunternehmer
+    Weinbergstr. 43
+    74360 Ilsfeld
+    0172 3527613
+    info@meyer-pc.de
+    www.meyer-pc.de
+
+Datenschutz: Informationen zum Umgang mit Ihren Daten  
+
+[.disclaimer]
+====
+Diese Website verwendet lokal gehostete Schriftarten. Es werden keine Daten an Dritte übertragen.
+====
