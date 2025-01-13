@@ -9,6 +9,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Convert AsciiDoc step
+        id: documents
+        uses: Analog-inc/asciidoctor-action@master
+        with:
+          shellcommand: "./.github/workflows/scripts/convert-adoc-to-html.sh"
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -30,4 +36,4 @@ jobs:
           context: .
           file: ./docker/webserver/Dockerfile
           push: true
-          tags: snooops/meyer-pc-homepage:${{ env.shorttag }}
+          tags: snooops/meyer-pc-website:${{ env.shorttag }}
