@@ -15,7 +15,7 @@ jobs:
         id: documents
         uses: Analog-inc/asciidoctor-action@master
         with:
-          shellcommand: ".github/workflows/scripts/convert-adoc-to-html.sh"
+          shellcommand: "website/.github/workflows/scripts/convert-adoc-to-html.sh"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
