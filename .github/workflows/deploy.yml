@@ -49,13 +49,13 @@ jobs:
         uses: rondefreitas/jinja2-action@v1.2.3
         with:
           template: website/docker/docker-compose.yml.j2
-          output_file: deployment/docker-compose.yml
+          output_file: website/docker-compose.yml
           strict: true
           variables: |
             shorttag=${{ env.shorttag }}
 
       - name: Commit docker-compose.yml
-        working-directory: deployment
+        working-directory: website
         run: |
           git config --global user.name 'snooops@meyer-pc-website'
           git config --global user.email 'snooops@users.noreply.github.com'
