@@ -46,7 +46,7 @@ jobs:
           path: deployment
 
       - name: Setup docker-compose.yml
-        uses: cuchi/jinja2-action@v1.2.2
+        uses: rondefreitas/jinja2-action@v1.2.3
         with:
           template: website/docker/docker-compose.yml.j2
           output_file: deployment/docker-compose.yml
