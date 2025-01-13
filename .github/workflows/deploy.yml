@@ -40,10 +40,10 @@ jobs:
           push: true
           tags: snooops/meyer-pc-website:${{ env.shorttag }}
   
-      - uses: actions/checkout@v4
-        with:
-          repository: 'snooops/meyer-pc-website-deployment'
-          path: deployment
+      # - uses: actions/checkout@v4
+      #   with:
+      #     repository: 'snooops/meyer-pc-website-deployment'
+      #     path: deployment
 
       - name: Setup docker-compose.yml
         uses: rondefreitas/jinja2-action@v1.2.3
