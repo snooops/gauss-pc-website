@@ -16,7 +16,4 @@ ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 # -r, --require=LIBRARY
 
 # Output HTML
-mkdir -p ./outputs/html
-asciidoctor -B ${CURRENT_PATH}/ -D ${CURRENT_PATH}/outputs/html/ -o index.html -r asciidoctor-diagram index.adoc
-
-cp -r ${CURRENT_PATH}/src/images outputs/html
+asciidoctor -B ${CURRENT_PATH}/src -D ${CURRENT_PATH}/output/html/ -o index.html -a docinfo=shared ${CURRENT_PATH}/src/index.adoc
