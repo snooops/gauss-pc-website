@@ -28,7 +28,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract Build Tag
-        working-directory: website
         run: echo "shorttag=$(git rev-parse --short ${GITHUB_SHA})" >> $GITHUB_ENV
 
       - name: Build and push
