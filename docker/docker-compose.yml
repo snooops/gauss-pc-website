@@ -1,0 +1,29 @@
+services:
+  meyer-pc-website:
+    image: snooops/meyer-pc-website:bb38230
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.meyer-pc-website.entrypoints=http"
+      - "traefik.http.routers.meyer-pc-website.rule=Host(www.meyer-pc.de, meyer-pc.de)" 
+      - "traefik.http.middlewares.meyer-pc-website-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.meyer-pc-website.middlewares=meyer-pc-website-https-redirect, meyer-pc-website-redirect-non-www-to-www"
+      - "traefik.http.routers.meyer-pc-website-secure.entrypoints=https"
+      - "traefik.http.routers.meyer-pc-website-secure.rule=Host(www.meyer-pc.de, meyer-pc.de)"
+      - "traefik.http.routers.meyer-pc-website-secure.tls=true"
+      - "traefik.http.routers.meyer-pc-website-secure.tls.certresolver=http"
+      - "traefik.http.routers.meyer-pc-website-secure.service=meyer-pc-website"
+      - "traefik.http.services.meyer-pc-website.loadbalancer.server.port=9000"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.meyer-pc-website-secure.middlewares=secHeaders@file"
+
+      - "traefik.http.middlewares.meyer-pc-website-redirect-non-www-to-www.redirectregex.regex: ^https?://meyer-pc.de(.*)"
+      - "traefik.http.middlewares.meyer-pc-website-redirect-non-www-to-www.redirectregex.replacement: 'https:///www.meyer-pc.de$1"
+    networks:
+      - proxy
+    ports:
+      - "3000:3000"
+
+networks:
+  proxy:
+    external: true
