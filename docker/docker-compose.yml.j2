@@ -4,20 +4,22 @@ services:
     restart: unless-stopped
     labels:
       traefik.enable: true
-      traefik.http.routers.meyer-pc-website.entrypoints: http
-      traefik.http.routers.meyer-pc-website.rule: Host(`www.meyer-pc.de`) || Host(`meyer-pc.de`)
-      traefik.http.middlewares.meyer-pc-website-https-redirect.redirectscheme.scheme: https
-      traefik.http.routers.meyer-pc-website.middleware: meyer-pc-website-https-redirect, meyer-pc-website-redirect-non-www-to-www
-      traefik.http.routers.meyer-pc-website-secure.entrypoints: https
-      traefik.http.routers.meyer-pc-website-secure.rule: Host(`www.meyer-pc.de`) || Host(`meyer-pc.de`)
-      traefik.http.routers.meyer-pc-website-secure.tls: true
-      traefik.http.routers.meyer-pc-website-secure.tls.certresolver: http
-      traefik.http.routers.meyer-pc-website-secure.service: meyer-pc-website
-      traefik.http.services.meyer-pc-website.loadbalancer.server.port: 3000
+      
+      traefik.http.middlewares.wedding-https-redirect.redirectscheme.scheme: https
+      
+      traefik.http.routers.wedding.entrypoints: http
+      traefik.http.routers.wedding.rule: Host(`meyer-pc.de`) || Host(`www.meyer-pc.de`)
+      traefik.http.routers.wedding.middlewares: wedding-https-redirect
+      
+
+      traefik.http.routers.wedding-secure.entrypoints: https
+      traefik.http.routers.wedding-secure.rule: Host(`meyer-pc.de`) || Host(`meyer-pc.de`)
+      traefik.http.routers.wedding-secure.tls: true
+      traefik.http.routers.wedding-secure.tls.certresolver: http
+      traefik.http.routers.wedding-secure.service: wedding
+      traefik.http.routers.wedding-secure.middlewares: secHeaders@file
+      traefik.http.services.wedding.loadbalancer.server.port: 80
       traefik.docker.network: proxy
-      traefik.http.routers.meyer-pc-website-secure.middlewares: secHeaders@file
-      traefik.http.middlewares.meyer-pc-website-redirect-non-www-to-www.redirectregex.regex: ^https?://meyer-pc.de/(.*)
-      traefik.http.middlewares.meyer-pc-website-redirect-non-www-to-www.redirectregex.replacement: https:///www.meyer-pc.de/$1
     networks:
       - proxy
     ports:
