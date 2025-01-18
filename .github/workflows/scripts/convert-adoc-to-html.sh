@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#!/bin/bash
 set -e
 
 CURRENT_PATH=`pwd`
