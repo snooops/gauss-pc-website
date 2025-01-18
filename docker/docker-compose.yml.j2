@@ -7,7 +7,7 @@ services:
       traefik.http.routers.meyer-pc-website.entrypoints: http
       traefik.http.routers.meyer-pc-website.rule: Host(`www.meyer-pc.de`) || Host(`meyer-pc.de`)
       traefik.http.middlewares.meyer-pc-website-https-redirect.redirectscheme.scheme: https
-      traefik.http.routers.meyer-pc-website.middleware: =meyer-pc-website-https-redirect, meyer-pc-website-redirect-non-www-to-www
+      traefik.http.routers.meyer-pc-website.middleware: meyer-pc-website-https-redirect, meyer-pc-website-redirect-non-www-to-www
       traefik.http.routers.meyer-pc-website-secure.entrypoints: https
       traefik.http.routers.meyer-pc-website-secure.rule: Host(`www.meyer-pc.de`) || Host(`meyer-pc.de`)
       traefik.http.routers.meyer-pc-website-secure.tls: true
