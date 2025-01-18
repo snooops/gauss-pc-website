@@ -1,6 +1,6 @@
 services:
   meyer-pc-website:
-    image: snooops/meyer-pc-website:0b6e2d6
+    image: snooops/meyer-pc-website:4e10b82
     restart: unless-stopped
     labels:
       traefik.enable: true
@@ -13,7 +13,7 @@ services:
       
 
       traefik.http.routers.wedding-secure.entrypoints: https
-      traefik.http.routers.wedding-secure.rule: Host(`meyer-pc.de`) || Host(`www.meyer-pc.de`)
+      traefik.http.routers.wedding-secure.rule: Host(`meyer-pc.de`) || Host(`meyer-pc.de`)
       traefik.http.routers.wedding-secure.tls: true
       traefik.http.routers.wedding-secure.tls.certresolver: http
       traefik.http.routers.wedding-secure.service: wedding
