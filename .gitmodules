@@ -1,0 +1,6 @@
+[submodule "meyer-pc/themes/ananke"]
+	path = meyer-pc/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "meyer-pc/themes/beautifulhugo"]
+	path = meyer-pc/themes/beautifulhugo
+	url = https://github.com/halogenica/beautifulhugo.git
