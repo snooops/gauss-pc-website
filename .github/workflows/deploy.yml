@@ -33,7 +33,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
-          file: docker/Dockerfile
+          context: .
+          file: ./docker/webserver/Dockerfile
           push: true
           tags: snooops/meyer-pc-website:${{ env.shorttag }}
   
