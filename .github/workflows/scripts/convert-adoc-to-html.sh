@@ -4,7 +4,8 @@
 set -e
 
 CURRENT_PATH=`pwd`
-echo $CURRENT_PATH
+echo ${CURRENT_PATH}
+ls -la ${CURRENT_PATH}
 ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 
 # -a, --attribute=ATTRIBUTE
