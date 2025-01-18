@@ -18,6 +18,6 @@ ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 
 # Output HTML
 mkdir -p ./outputs/html
-asciidoctor -B ${CURRENT_PATH}/website/src -D ${CURRENT_PATH}/website/outputs/html/ -o index.html -a docinfo=shared ${CURRENT_PATH}/website/src/index.adoc
+asciidoctor -B ${CURRENT_PATH}/src -D ${CURRENT_PATH}/outputs/html/ -o index.html -a docinfo=shared ${CURRENT_PATH}/src/index.adoc
 
 cp -r ${CURRENT_PATH}/assets/* ./outputs/html/
