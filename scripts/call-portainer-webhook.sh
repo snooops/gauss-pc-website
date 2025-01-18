@@ -3,4 +3,4 @@
 set -e
 
 # call curl
-curl -X POST -s ${{ secrets.PORTAINER_WEBHOOK }}
+curl -X POST -s ${PORTAINER_WEBHOOK}
