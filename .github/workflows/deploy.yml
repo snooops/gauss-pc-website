@@ -1,14 +1,21 @@
-name: Building Docker image
-
-on: 
-  push:
+name: Build Docker and upload it
+on:
+  push: 
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-
+        
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with: 
+          path: website
+
+      - name: Convert AsciiDoc step
+        id: documents
+        uses: Analog-inc/asciidoctor-action@master
+        with:
+          shellcommand: "website/.github/workflows/scripts/convert-adoc-to-html.sh"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -23,16 +30,16 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Extract Build Tag
+        working-directory: website
         run: echo "shorttag=$(git rev-parse --short ${GITHUB_SHA})" >> $GITHUB_ENV
 
       - name: Build and push
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
-          context: .
-          file: ./docker/Dockerfile
+          file: docker/Dockerfile
           push: true
           tags: snooops/meyer-pc-website:${{ env.shorttag }}
-
+  
       - name: Setup docker-compose.yml
         uses: rondefreitas/jinja2-action@v1.2.3
         with:
