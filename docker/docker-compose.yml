@@ -1,6 +1,6 @@
 services:
   meyer-pc-website:
-    image: snooops/meyer-pc-website:e4b68ee
+    image: snooops/meyer-pc-website:75a8555
     restart: unless-stopped
     labels:
       traefik.enable: true
