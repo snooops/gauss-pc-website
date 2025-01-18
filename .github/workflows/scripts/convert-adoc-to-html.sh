@@ -4,8 +4,6 @@
 set -e
 
 CURRENT_PATH=`pwd`
-echo ${CURRENT_PATH}
-ls -la ${CURRENT_PATH}
 ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 
 # -a, --attribute=ATTRIBUTE
@@ -18,10 +16,4 @@ ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 # -r, --require=LIBRARY
 
 # Output HTML
-mkdir -p ${CURRENT_PATH}/outputs/html
-asciidoctor -B ${CURRENT_PATH}/src -D ${CURRENT_PATH}/outputs/html/ -o index.html -a docinfo=shared ${CURRENT_PATH}/src/index.adoc
-
-cp -r ${CURRENT_PATH}/assets/* ${CURRENT_PATH}/outputs/html/
-ls -la ${CURRENT_PATH}/outputs/html/
-
-ls -la ${CURRENT_PATH}
+asciidoctor -B ${CURRENT_PATH}/src -D ${CURRENT_PATH}/output/html/ -o index.html -a docinfo=shared ${CURRENT_PATH}/src/index.adoc

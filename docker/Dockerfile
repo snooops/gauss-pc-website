@@ -7,7 +7,7 @@ WORKDIR /home/static
 
 # Copy the static website
 # Use the .dockerignore file to control what ends up inside the image!
-ADD --chown=static ./outputs/html /home/static
+ADD --chown=static ./output/ /home/static
 
 # Run BusyBox httpd
 CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
