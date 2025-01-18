@@ -13,7 +13,7 @@ jobs:
         id: documents
         uses: Analog-inc/asciidoctor-action@master
         with:
-          shellcommand: ".github/workflows/scripts/convert-adoc-to-html.sh"
+          shellcommand: "scripts/convert-adoc-to-html.sh"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -58,4 +58,4 @@ jobs:
     needs: build
     steps:
       - name: Trigger portainer deployment        
-        run: "sh .github/workflows/scripts/call-portainer-webhook.sh"
+        run: bash scripts/call-portainer-webhook.sh
