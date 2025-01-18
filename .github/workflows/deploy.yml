@@ -8,14 +8,12 @@ jobs:
         
     steps:
       - uses: actions/checkout@v4
-        with: 
-          path: website
 
       - name: Convert AsciiDoc step
         id: documents
         uses: Analog-inc/asciidoctor-action@master
         with:
-          shellcommand: "website/.github/workflows/scripts/convert-adoc-to-html.sh"
+          shellcommand: ".github/workflows/scripts/convert-adoc-to-html.sh"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
