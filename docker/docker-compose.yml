@@ -1,6 +1,6 @@
 services:
   meyer-pc-website:
-    image: snooops/meyer-pc-website:d73cb53
+    image: snooops/meyer-pc-website:a2fe275
     restart: unless-stopped
     labels:
       traefik.enable: true
@@ -18,7 +18,7 @@ services:
       traefik.http.routers.meyer-pc-website-secure.tls.certresolver: http
       traefik.http.routers.meyer-pc-website-secure.service: meyer-pc-website
       traefik.http.routers.meyer-pc-website-secure.middlewares: secHeaders@file
-      traefik.http.services.meyer-pc-website.loadbalancer.server.port: 80
+      traefik.http.services.meyer-pc-website.loadbalancer.server.port: 3000
       traefik.docker.network: proxy
     networks:
       - proxy
