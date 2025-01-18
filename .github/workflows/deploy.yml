@@ -52,7 +52,10 @@ jobs:
           commit_message: Automated Change
           commit_user_name: GitHub Actions Bot
           commit_user_email: snooops@dns-serve.de
+
   deploy:
+    runs-on: ubuntu-24.04
+    needs: build
     steps:
       - name: Trigger portainer deployment        
         run: bash .github/workflows/scripts/call-portainer-webhook.sh
