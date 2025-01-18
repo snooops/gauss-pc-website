@@ -8,6 +8,10 @@ echo ${CURRENT_PATH}
 ls -la ${CURRENT_PATH}
 ASCIIDOCTOR_PDF_DIR=`gem contents asciidoctor-pdf --show-install-dir`
 
+
+echo "/home/runner/work/meyer-pc-website/meyer-pc-website"
+ls -la /home/runner/work/meyer-pc-website/meyer-pc-website
+
 # -a, --attribute=ATTRIBUTE
 # -B, --base-dir=DIR
 # -D, --destination-dir=DIR
