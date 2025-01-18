@@ -58,4 +58,4 @@ jobs:
     needs: build
     steps:
       - name: Trigger portainer deployment        
-        run: bash .github/workflows/scripts/call-portainer-webhook.sh
+        run: "sh .github/workflows/scripts/call-portainer-webhook.sh"
