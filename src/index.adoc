@@ -7,7 +7,7 @@ IT die Funktioniert
 :toc:
 :toclevels: 1
 :toc-title:
-:favicon: ./images/favicon/favicon.png
+:favicon: images/favicon/favicon.png
 
 [#meyer-pc-logo]
 image::Logo.png[Meyer PC, 250]
