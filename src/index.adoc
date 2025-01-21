@@ -8,6 +8,7 @@ IT die Funktioniert aus Ilsfeld
 :toclevels: 1
 :toc-title:
 :favicon: images/favicon/favicon.png
+:!webfonts:
 
 [#meyer-pc-logo]
 image::Logo.png[Meyer PC, 250]
