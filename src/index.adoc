@@ -3,7 +3,7 @@
 
 
 = Meyer PC
-IT die Funktioniert
+IT die Funktioniert aus Ilsfeld
 :toc:
 :toclevels: 1
 :toc-title:
@@ -13,7 +13,7 @@ IT die Funktioniert
 image::Logo.png[Meyer PC, 250]
 
 == Über mich
-Mein Name ist Dennis Meyer, und ich bin IT-Spezialist mit einer klaren Mission: Menschen und kleine Unternehmen bei ihren IT-Herausforderungen zu unterstützen. Mein Fokus liegt darauf, praxisnahe und effektive Lösungen für alltägliche IT-Probleme zu finden – sei es im Bereich PC-Support, IT-Infrastruktur oder der Digitalisierung von Prozessen.
+Mein Name ist Dennis Meyer, und ich bin IT-Spezialist mit einer klaren Mission: Menschen und kleine Unternehmen aus Ilsfeld und Umgebgung bei ihren IT-Herausforderungen zu unterstützen. Mein Fokus liegt darauf, praxisnahe und effektive Lösungen für alltägliche IT-Probleme zu finden – sei es im Bereich PC-Support, IT-Infrastruktur oder der Digitalisierung von Prozessen.
 
 Ich glaube daran, dass Technologie nicht kompliziert sein muss. Deshalb stehe ich meinen Kunden mit Rat und Tat zur Seite, um deren Systeme effizienter, sicherer und zukunftsfähig zu machen. Dabei lege ich besonderen Wert auf persönliche Beratung und individuelle Anpassungen, die wirklich zu den Bedürfnissen passen. Mein Service ist darauf ausgerichtet, echten Mehrwert zu bieten – erschwinglich und fair, denn Unterstützung sollte für jeden zugänglich sein.
 
