@@ -1,14 +1,14 @@
 networks:
-  wordpress-network:
+  meyer-pc-wordpress:
   proxy:
     external: true
  
 volumes:
-  mariadb-data:
-  wordpress-data:
+  meyer-pc-wordpress-mariadb-data:
+  meyer-pc-wordpress-wordpress-data:
  
 services:
-  mariadb:
+  meyer-pc-wordpress-mariadb:
     image: ${WORDPRESS_MARIADB_IMAGE_TAG}
     volumes:
       - mariadb-data:/var/lib/mysql
@@ -18,7 +18,7 @@ services:
       MARIADB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
       MARIADB_ROOT_PASSWORD: ${WORDPRESS_DB_ADMIN_PASSWORD}
     networks:
-      - wordpress-network
+      - meyer-pc-wordpress
     healthcheck:
       test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
       interval: 10s
@@ -30,7 +30,7 @@ services:
   meyer-pc-wordpress:
     image: ${WORDPRESS_IMAGE_TAG}
     volumes:
-      - wordpress-data:/bitnami/wordpress
+      - meyer-pc-wordpress-data:/bitnami/wordpress
     environment:
       WORDPRESS_DATABASE_HOST: mariadb
       WORDPRESS_DATABASE_PORT_NUMBER: 3306
@@ -49,7 +49,7 @@ services:
       WORDPRESS_SMTP_USER: ${WORDPRESS_SMTP_USER_NAME}
       WORDPRESS_SMTP_PASSWORD: ${WORDPRESS_SMTP_PASSWORD}
     networks:
-      - wordpress-network
+      - meyer-pc-wordpress
       - proxy
     healthcheck:
       test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/8080' || exit 1
@@ -71,6 +71,6 @@ services:
       traefik.docker.network: proxy
     restart: unless-stopped
     depends_on:
-      mariadb:
+      meyer-pc-wordpress-mariadb:
         condition: service_healthy
  
