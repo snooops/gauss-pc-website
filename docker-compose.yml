@@ -27,7 +27,7 @@ services:
       start_period: 60s
     restart: unless-stopped
  
-  wordpress:
+  meyer-pc-wordpress:
     image: ${WORDPRESS_IMAGE_TAG}
     volumes:
       - wordpress-data:/bitnami/wordpress
@@ -60,7 +60,7 @@ services:
     labels:
       traefik.enable: true
       traefik.http.routers.meyer-pc-wordpress.rule: Host(`${WORDPRESS_HOSTNAME}`)
-      traefik.http.routers.meyer-pc-wordpress.service: wordpress
+      traefik.http.routers.meyer-pc-wordpress.service: meyer-pc-wordpress
       traefik.http.routers.meyer-pc-wordpress.entrypoints: https
       traefik.http.services.meyer-pc-wordpress.loadbalancer.server.port: 8080
       traefik.http.routers.meyer-pc-wordpress.tls: true
