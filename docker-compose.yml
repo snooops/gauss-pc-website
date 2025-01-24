@@ -30,7 +30,7 @@ services:
   meyer-pc-wordpress:
     image: ${WORDPRESS_IMAGE_TAG}
     volumes:
-      - meyer-pc-wordpress-data:/bitnami/wordpress
+      - meyer-pc-wordpress-wordpress-data:/bitnami/wordpress
     environment:
       WORDPRESS_DATABASE_HOST: mariadb
       WORDPRESS_DATABASE_PORT_NUMBER: 3306
