@@ -32,7 +32,7 @@ services:
     volumes:
       - meyer-pc-wordpress-wordpress-data:/bitnami/wordpress
     environment:
-      WORDPRESS_DATABASE_HOST: mariadb
+      WORDPRESS_DATABASE_HOST: meyer-pc-wordpress-mariadb
       WORDPRESS_DATABASE_PORT_NUMBER: 3306
       WORDPRESS_DATABASE_NAME: ${WORDPRESS_DB_NAME}
       WORDPRESS_DATABASE_USER: ${WORDPRESS_DB_USER}
