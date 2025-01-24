@@ -11,7 +11,7 @@ services:
   meyer-pc-wordpress-mariadb:
     image: ${WORDPRESS_MARIADB_IMAGE_TAG}
     volumes:
-      - mariadb-data:/var/lib/mysql
+      - meyer-pc-wordpress-mariadb-data:/var/lib/mysql
     environment:
       MARIADB_DATABASE: ${WORDPRESS_DB_NAME}
       MARIADB_USER: ${WORDPRESS_DB_USER}
