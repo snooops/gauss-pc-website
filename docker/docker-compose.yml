@@ -1,7 +1,14 @@
 services:
   gauss-pc-website:
-    image: snooops/meyer-pc-website:1665b3d
+    image: snooops/meyer-pc-website:f1715f8
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      start_period: 20s
+      start_interval: 5s
+      interval: 20s
+      timeout: 1m
+      retries: 3
     labels:
       traefik.enable: true
       
