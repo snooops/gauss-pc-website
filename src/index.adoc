@@ -2,7 +2,7 @@
 
 
 
-= Meyer PC
+= Gauss PC
 IT die Funktioniert aus Ilsfeld
 :toc:
 :toclevels: 1
@@ -10,11 +10,11 @@ IT die Funktioniert aus Ilsfeld
 :favicon: images/favicon/favicon.png
 :!webfonts:
 
-[#meyer-pc-logo]
-image::Logo.png[Meyer PC, 250]
+[#Gauss-pc-logo]
+image::Logo.png[Gauss PC, 250]
 
 == Über mich
-Mein Name ist Dennis Meyer, und ich bin IT-Spezialist mit einer klaren Mission: Menschen und kleine Unternehmen aus Ilsfeld und Umgebgung bei ihren IT-Herausforderungen zu unterstützen. Mein Fokus liegt darauf, praxisnahe und effektive Lösungen für alltägliche IT-Probleme zu finden – sei es im Bereich PC-Support, IT-Infrastruktur oder der Digitalisierung von Prozessen.
+Mein Name ist Dennis Gauss, und ich bin IT-Spezialist mit einer klaren Mission: Menschen und kleine Unternehmen aus Ilsfeld und Umgebgung bei ihren IT-Herausforderungen zu unterstützen. Mein Fokus liegt darauf, praxisnahe und effektive Lösungen für alltägliche IT-Probleme zu finden – sei es im Bereich PC-Support, IT-Infrastruktur oder der Digitalisierung von Prozessen.
 
 Ich glaube daran, dass Technologie nicht kompliziert sein muss. Deshalb stehe ich meinen Kunden mit Rat und Tat zur Seite, um deren Systeme effizienter, sicherer und zukunftsfähig zu machen. Dabei lege ich besonderen Wert auf persönliche Beratung und individuelle Anpassungen, die wirklich zu den Bedürfnissen passen. Mein Service ist darauf ausgerichtet, echten Mehrwert zu bieten – erschwinglich und fair, denn Unterstützung sollte für jeden zugänglich sein.
 
@@ -43,18 +43,18 @@ Gemeinsam erarbeiten wir die optimale Lösung, die perfekt auf die Bedürfnisse 
 == Kontakt
 Sie haben Fragen oder möchten ein Angebot? Kontaktieren Sie mich:
 
-* E-Mail: info@meyer-pc.de
+* E-Mail: dennis@gauss-pc.de
 * Telefon: +491723527613  
 
 == Impressum & Datenschutz
 Impressum: Angaben gemäß § 5 TMG  
 
-    Dennis Meyer, Kleinunternehmer
+    Dennis Gauss, Kleinunternehmer
     Weinbergstr. 43
     74360 Ilsfeld
     0172 3527613
-    info@meyer-pc.de
-    www.meyer-pc.de
+    info@gauss-pc.de
+    www.Gauss-pc.de
 
 Datenschutz: Informationen zum Umgang mit Ihren Daten  
 
