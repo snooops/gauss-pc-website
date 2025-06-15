@@ -1,6 +1,6 @@
 services:
   gauss-pc-website:
-    image: snooops/meyer-pc-website:e3376a6
+    image: snooops/meyer-pc-website:1665b3d
     restart: unless-stopped
     labels:
       traefik.enable: true
