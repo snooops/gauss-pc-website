@@ -16,14 +16,14 @@ services:
       
       traefik.http.routers.gauss-pc-website.entrypoints: http
       traefik.http.routers.gauss-pc-website.rule: Host(`gauss-pc.de`) || Host(`www.gauss-pc.de`)
-      traefik.http.routers.gauss-pc-website.middlewares: gauss-pc-website-https-redirect
+      traefik.http.routers.gauss-pc-website.middlewares: gauss-pc-website-https-redirect, redirect-non-www-to-www@file
       
       traefik.http.routers.gauss-pc-website-secure.entrypoints: https
       traefik.http.routers.gauss-pc-website-secure.rule: Host(`gauss-pc.de`) || Host(`www.gauss-pc.de`)
       traefik.http.routers.gauss-pc-website-secure.tls: true
       traefik.http.routers.gauss-pc-website-secure.tls.certresolver: http
       traefik.http.routers.gauss-pc-website-secure.service: gauss-pc-website
-      traefik.http.routers.gauss-pc-website-secure.middlewares: secHeaders@file
+      traefik.http.routers.gauss-pc-website-secure.middlewares: secHeaders@file, redirect-non-www-to-www@file
       traefik.http.services.gauss-pc-website.loadbalancer.server.port: 80
       traefik.docker.network: proxy
     networks:
